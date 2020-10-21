@@ -67,11 +67,7 @@
         android:text="Get Contact List"
         android:id="@+id/getContactList"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Upload Avatar"
-        android:id="@+id/uploadAvatar"/>
+
 
 
 

@@ -169,19 +169,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button uploadAvatar = findViewById(R.id.uploadAvatar);
-        getContactList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        ResponseObject<List<Contact>> getContactListResp = Requests.getContactList();
-                        Log.d(TAG, getContactListResp.toString());
-                    }
-                }).start();
-            }
-        });
 
 
 
