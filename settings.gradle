@@ -1,3 +1,4 @@
+include ':imagedownload'
 include ':imageupload'
 include ':app'
 rootProject.name = "My Application"
