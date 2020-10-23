@@ -247,6 +247,21 @@ public class Requests {
         return null;
     }
 
+    public static ResponseObject<List<News>> getNewsByUserId(int userId){
+        HttpURLConnection connection = null;
+        try {
+            connection = RequestUtil.setConnection("/question/newsDetailByUserId?uid="+userId, GET, false);
+            connection.setRequestProperty("Cookie", token);
+
+            String result = RequestUtil.getResponse(connection);
+            ResponseObject<List<News>> res = new Gson().fromJson(result, new TypeToken<ResponseObject<List<News>>>() {
+            }.getType());
+            return res;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public static Bitmap downLoadImage(String fileName){
         try {

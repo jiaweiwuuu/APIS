@@ -68,6 +68,12 @@
         android:id="@+id/getContactList"/>
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get News By User Id"
+        android:id="@+id/getNewsByUserId"/>
+
 
 
 

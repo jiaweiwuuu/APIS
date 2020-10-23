@@ -169,8 +169,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
+        Button getNewsByUserId = findViewById(R.id.getNewsByUserId);
+        getNewsByUserId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ResponseObject<List<News>> getNewsByUserIdResp = Requests.getNewsByUserId(17);
+                        Log.d(TAG, getNewsByUserIdResp.toString());
+                    }
+                }).start();
+            }
+        });
 
     }
 
