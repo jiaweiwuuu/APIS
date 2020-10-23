@@ -10,6 +10,6 @@
 
 **不要忘记login**, 所有的接口参数都写死了，只是用来演示。 接口调用后的返回值在logcat里面，注意filter设置的tag为my
 
-## module imagedownload
+## module imagedownload。所有的上传接口均上传下载下来的那张图，因此调用上传接口前必须调用下载接口
 **这个module里面懒得写login接口，因此在调用上传接口前要吧这个module里面的android_client的Requests里面的token值更新，具体做法是用postman调用signin接口，获取cookie，拿到最新的token值**
 这个module都是涉及到图片的上传和下载，代码写的稀巴烂
